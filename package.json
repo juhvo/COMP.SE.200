@@ -7,7 +7,7 @@
   "scripts": {
     "test": "mocha",
     "coverage": "c8 --reporter=lcov -x ./src/.internal npm test",
-    "report": "c8 report"
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "dependencies": {},
   "devDependencies": {
