@@ -23,7 +23,10 @@ describe("toString", () => {
         expect(result).toEqual("200")
     })
     it("should stringify negative integer", () => {
-        //expect().to.be.true
+        isSymbol.mockReturnValueOnce(false)
+
+        const result = toString(-300)
+        expect(result).toEqual("-300")
     })
     it("should stringify positive double", () => {
         //expect().to.be.true
