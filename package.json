@@ -5,7 +5,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "mocha",
+    "test": "jest",
     "coverage": "c8 --reporter=lcov -x ./src/.internal npm test",
     "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
@@ -14,6 +14,7 @@
     "c8": "^7.10.0",
     "chai": "^4.3.4",
     "coveralls": "^3.1.1",
+    "jest": "^27.3.1",
     "mocha": "^9.1.2",
     "sinon": "^12.0.1"
   }
