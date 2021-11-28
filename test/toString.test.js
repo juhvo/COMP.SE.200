@@ -1,14 +1,20 @@
+import isSymbol from '../src/isSymbol.js'
 import toString from '../src/toString.js'
-import { expect } from 'chai'
+
+jest.mock('../src/isSymbol.js')
 
 describe("toString", () => {
     it("should stringify undefined", () => {
+        isSymbol.mockReturnValueOnce(false)
+
         const result = toString(undefined)
-        expect(result).to.equal("undefined")
+        expect(result).toEqual("undefined")
     })
     it("should stringify an array", () => {
+        isSymbol.mockReturnValueOnce(false)
+
         const result = toString([1, 2, 3])
-        expect(result).to.equal("1,2,3")
+        expect(result).toEqual("1,2,3")
     })
     it("should stringify positive integer", () => {
         //expect().to.be.true
