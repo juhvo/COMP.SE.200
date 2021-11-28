@@ -13,4 +13,8 @@ describe("add", () => {
         const result = add(undefined, 2)
         expect(result).toEqual(2)
     })
+    it("should handle string inputs", () => {
+        const result = add("Test", "Data")
+        expect(result).toEqual("TestData")
+    })
 })
