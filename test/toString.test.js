@@ -53,6 +53,9 @@ describe("toString", () => {
         expect(result).toEqual("Infinity")
     })
     it("should stringify large number", () => {
-        //expect().to.be.true
+        isSymbol.mockReturnValueOnce(false)
+
+        const result = toString(Number.MAX_VALUE)
+        expect(result).toEqual(Number.MAX_VALUE.toString())
     })
 })
