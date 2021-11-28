@@ -11,6 +11,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.16.0",
     "c8": "^7.10.0",
     "chai": "^4.3.4",
     "coveralls": "^3.1.1",
