@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "coverage": "c8 --reporter=lcov -x ./src/.internal npm test",
+    "coverage": "c8 --src src --reporter lcov --exclude src/.internal --exclude test npm test",
     "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "dependencies": {},
