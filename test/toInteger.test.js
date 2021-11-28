@@ -39,7 +39,6 @@ describe("toInteger", () => {
         const result = toInteger(input)
         expect(result).toEqual(10)
     })
-    // Update test plan: remove condition and change expected return value
     it("should transform localized string number to number", () => {
         const input = "2,500.99"
         toFinite.mockReturnValueOnce(2500.99)
