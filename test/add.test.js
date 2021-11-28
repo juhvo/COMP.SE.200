@@ -17,4 +17,8 @@ describe("add", () => {
         const result = add("Test", "Data")
         expect(result).toEqual("TestData")
     })
+    it("should add valid input numbers", () => {
+        const result = add(4, 5)
+        expect(result).toEqual(9)
+    })
 })
