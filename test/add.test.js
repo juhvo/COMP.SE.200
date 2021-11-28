@@ -21,4 +21,8 @@ describe("add", () => {
         const result = add(4, 5)
         expect(result).toEqual(9)
     })
+    it("should handle addition of negative numbers", () => {
+        const result = add(4, -3)
+        expect(result).toEqual(1)
+    })
 })
