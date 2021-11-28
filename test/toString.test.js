@@ -1,34 +1,61 @@
+import isSymbol from '../src/isSymbol.js'
 import toString from '../src/toString.js'
-import { expect } from 'chai'
+
+jest.mock('../src/isSymbol.js')
 
 describe("toString", () => {
     it("should stringify undefined", () => {
+        isSymbol.mockReturnValueOnce(false)
+
         const result = toString(undefined)
-        expect(result).to.equal("undefined")
+        expect(result).toEqual("undefined")
     })
     it("should stringify an array", () => {
+        isSymbol.mockReturnValueOnce(false)
+
         const result = toString([1, 2, 3])
-        expect(result).to.equal("1,2,3")
+        expect(result).toEqual("1,2,3")
     })
     it("should stringify positive integer", () => {
-        //expect().to.be.true
+        isSymbol.mockReturnValueOnce(false)
+
+        const result = toString(200)
+        expect(result).toEqual("200")
     })
     it("should stringify negative integer", () => {
-        //expect().to.be.true
+        isSymbol.mockReturnValueOnce(false)
+
+        const result = toString(-300)
+        expect(result).toEqual("-300")
     })
     it("should stringify positive double", () => {
-        //expect().to.be.true
+        isSymbol.mockReturnValueOnce(false)
+
+        const result = toString(50.5)
+        expect(result).toEqual("50.5")
     })
     it("should stringify zero", () => {
-        //expect().to.be.true
+        isSymbol.mockReturnValueOnce(false)
+
+        const result = toString(0)
+        expect(result).toEqual("0")
     })
     it("should return string unchanged", () => {
-        //expect().to.be.true
+        isSymbol.mockReturnValueOnce(false)
+
+        const result = toString("Already a string")
+        expect(result).toEqual("Already a string")
     })
     it("should stringify Infinity", () => {
-        //expect().to.be.true
+        isSymbol.mockReturnValueOnce(false)
+
+        const result = toString(Infinity)
+        expect(result).toEqual("Infinity")
     })
     it("should stringify large number", () => {
-        //expect().to.be.true
+        isSymbol.mockReturnValueOnce(false)
+
+        const result = toString(Number.MAX_VALUE)
+        expect(result).toEqual(Number.MAX_VALUE.toString())
     })
 })
