@@ -35,7 +35,10 @@ describe("toString", () => {
         expect(result).toEqual("50.5")
     })
     it("should stringify zero", () => {
-        //expect().to.be.true
+        isSymbol.mockReturnValueOnce(false)
+
+        const result = toString(0)
+        expect(result).toEqual("0")
     })
     it("should return string unchanged", () => {
         //expect().to.be.true
